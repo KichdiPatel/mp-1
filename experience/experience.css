@@ -2,23 +2,33 @@
 
 
 body {
-    /* font-family: 'Arial', sans-serif; */
     font-family: "Playfair Display", serif;
     color: #333;
     line-height: 1.6;
     background-color: #faf3dd ;
+    margin: 0;
+    padding: 0;
+    font-size: calc(12px + 0.2vw);
 }
 
 /* to get the split screen nav and main content */
 .wrapper {
     display: flex;
     height: 100vh;
+    flex-direction: row;
+}
+
+/* second wrapper helps properly align the main content with the footer */
+.wrapper2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* nav bar formatting */
 nav {
     background-color: #8fc0a9; 
-    width: 30%; /* Sidebar width */
+    width: 30%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,14 +46,13 @@ nav ul li a {
     text-decoration: none;
     color: #faf3dd;
     font-size: 1.4em;
-    transition: color 0.3s ease;
 }
 
 nav header {
     text-align: center;
 }
 
-nav header h4, nav header a{
+nav header h4, nav header a, nav header p{
     color: #faf3dd;
 
 }
@@ -64,16 +73,18 @@ nav h1 {
     margin-bottom: 10px;
 }
 
-/* Right Content Section */
+/* main content formatting */
 main {
     flex: 1;
     background-color: #faf3dd;
-    padding: 200px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;  
     align-items: center;      
-    position: relative;
+    width: 70%;
+    margin: auto;
+    box-sizing: border-box;
 }
 
 .experience-wrapper {
@@ -103,7 +114,6 @@ main {
 
 .experience ul {
     padding-left: 20px;
-    list-style-position: outside
 }
 .experience p {
     font-size: 1em;
@@ -122,10 +132,60 @@ main p {
     text-align: justify;
 }
 
+/* footer formatting */
 footer {
-    width: 100%;          /* Ensure the footer spans the full width */
-    text-align: center;   /* Center the footer content */
-    margin-left: 40px;
-    position: absolute; 
+    width: 100%;         
+    text-align: left;  
+    padding: 20px; 
+    background-color: #faf3dd;
+    position: relative;
     bottom: 0;
+}
+
+/* adjustments for mobile sized screen */
+@media screen and (max-width: 750px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav img {
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 100px;
+        max-height: 100px;
+        width: 100%;
+        border-radius: 50%;
+        border: 4px solid #faf3dd;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0 10px;
+        padding: 0;
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
 }

@@ -9,7 +9,7 @@ function addition() {
   const second = Number(document.getElementById("second-number").value);
   let result = first + second;
 
-  document.getElementById("output").innerHTML = `<h3>${result}</h3>`;
+  outputResult(result);
 }
 
 function subtraction() {
@@ -17,7 +17,7 @@ function subtraction() {
   const second = Number(document.getElementById("second-number").value);
   let result = first - second;
 
-  document.getElementById("output").innerHTML = `<h3>${result}</h3>`;
+  outputResult(result);
 }
 
 function multiplication() {
@@ -25,7 +25,7 @@ function multiplication() {
   const second = Number(document.getElementById("second-number").value);
   let result = first * second;
 
-  document.getElementById("output").innerHTML = `<h3>${result}</h3>`;
+  outputResult(result);
 }
 
 function division() {
@@ -34,11 +34,11 @@ function division() {
 
   if (second !== 0) {
     let result = first / second;
-    document.getElementById("output").innerHTML = `<h3>${result}</h3>`;
+    outputResult(result);
   } else {
-    document.getElementById(
-      "output"
-    ).innerHTML = `<h3>Cannot divide by zero</h3>`;
+    const output = document.getElementById("output");
+    output.style.color = "black";
+    output.innerHTML = `<h3>Cannot divide by zero</h3>`;
   }
 }
 
@@ -51,5 +51,17 @@ function power() {
     total = total * first;
   }
 
-  document.getElementById("output").innerHTML = `<h3>${total}</h3>`;
+  outputResult(total);
+}
+
+function outputResult(result) {
+  const output = document.getElementById("output");
+
+  if (result < 0) {
+    output.style.color = "red";
+  } else {
+    output.style.color = "black";
+  }
+
+  output.innerHTML = `<h3>${result}</h3>`;
 }
