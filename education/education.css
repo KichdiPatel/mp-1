@@ -71,22 +71,40 @@ main {
     padding: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Vertically center content */
-    align-items: center;      /* Horizontally center content */
+    justify-content: center;  
+    align-items: center;      
     position: relative;
 }
 
-/* Main Section Styling */
+.education-wrapper {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.education {
+    background-color: #c8d5b9;
+    padding: 30px;
+    border-radius: 40px; 
+    margin-bottom: 30px;
+}
+
+.education h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.education h4 {
+    font-size: 1.4em;
+    margin: 5px 0;
+    font-weight: normal;
+}
+
 main h2 {
     font-size: 4em;
     color: #8fc0a9;
     margin-bottom: 10px;
-}
-
-main img {
-    display: block;
-    /* margin: 0 auto 20px; */
-    max-width: 500px;
 }
 
 main p {

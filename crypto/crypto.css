@@ -71,22 +71,49 @@ main {
     padding: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;  /* Vertically center content */
-    align-items: center;      /* Horizontally center content */
+    justify-content: center;  
+    align-items: center;      
     position: relative;
 }
 
-/* Main Section Styling */
+.experience-wrapper {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.experience {
+    background-color: #c8d5b9;
+    padding: 30px;
+    border-radius: 40px; 
+    margin-bottom: 30px;
+}
+
+.experience h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.experience h4 {
+    font-size: 1.4em;
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+.experience ul {
+    padding-left: 20px;
+    list-style-position: outside
+}
+.experience p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
 main h2 {
     font-size: 4em;
     color: #8fc0a9;
     margin-bottom: 10px;
-}
-
-main img {
-    display: block;
-    /* margin: 0 auto 20px; */
-    max-width: 500px;
 }
 
 main p {
