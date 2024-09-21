@@ -5,13 +5,13 @@ body {
     background-color: #faf3dd ;
     margin: 0;
     padding: 0;
-    font-size: calc(12px + 0.2vw);
+    font-size: calc(10px + 0.2vw);
 }
 
 /* to get the split screen nav and main content */
 .wrapper {
     display: flex;
-    height: 100vh;
+    min-height: 100vh; /* Ensure the wrapper takes full height of the viewport */
     flex-direction: row;
 }
 

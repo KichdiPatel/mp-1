@@ -8,13 +8,14 @@ body {
     background-color: #faf3dd ;
     margin: 0;
     padding: 0;
-    font-size: calc(12px + 0.2vw);
+    font-size: calc(10px + 0.2vw);
+    height: 100%;
 }
 
 /* to get the split screen nav and main content */
 .wrapper {
     display: flex;
-    height: 100vh;
+    min-height: 100vh; /* Ensure the wrapper takes full height of the viewport */
     flex-direction: row;
 }
 
@@ -34,6 +35,15 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
+}
+
+/* Make the ul list stretch */
+nav ul {
+    flex-grow: 1; /* Ensure the ul takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 nav ul li {
@@ -71,6 +81,7 @@ nav h1 {
     font-size: 2.5em;
     color: #faf3dd;
     margin-bottom: 10px;
+
 }
 
 /* main content formatting */
